@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- Indique au navigateur qu'il s'agit d'un document HTML5 -->
+<html lang="fr">
+<!-- lang="fr" : la page est en français (utile pour les moteurs de recherche et les lecteurs d'écran) -->
+
+<head>
+    <!-- Le <head> contient les informations sur la page : elles ne s'affichent pas dans la page elle-même -->
+    <meta charset="UTF-8">
+    <!-- UTF-8 : permet d'afficher correctement les accents (é, è, à...) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Indispensable pour que le site s'adapte à la largeur d'un téléphone -->
+
+    <meta name="description" content="Recette de pâtes au homard : ingrédients, étapes de préparation et formulaire pour donner votre avis.">
+    <meta name="keywords" content="pâtes, homard, recette, cuisine, gastronomie">
+    <meta name="author" content="Sergi Monfort, Raphael Watelet, Yanis Bousseksou">
+    <!-- Ces balises meta servent au référencement (SEO) : elles décrivent le contenu de la page -->
+
+    <link rel="stylesheet" href="homard.css">
+    <!-- Relie le fichier CSS à la page HTML -->
+
+    <title>Pâtes au homard - La recette</title>
+    <!-- Titre affiché dans l'onglet du navigateur (avant c'était "Document") -->
+</head>
+
+<body>
+
+    <!-- ========== EN-TÊTE ========== -->
+    <header class="header">
+        <h1>La recette des pâtes au homard !</h1>
+        <p>Découvrez notre délicieuse recette de pâtes au homard, parfaite pour un repas de fête.</p>
+        <p class="auteur">Par le chef étoilé Watelet</p>
+
+        <!-- Menu de navigation : chaque lien mène à une section de la page grâce à son id -->
+        <nav class="menu">
+            <a href="#ingredients">Ingrédients</a>
+            <a href="#preparation">Préparation</a>
+            <a href="#avis">Votre avis</a>
+        </nav>
+    </header>
+
+    <!-- ========== CONTENU PRINCIPAL ========== -->
+    <main>
+
+        <!-- Section 1 : image et informations pratiques -->
+        <section class="presentation">
+            <img src="homard.jpg" alt="Assiette de pâtes au homard">
+            <!-- alt : texte affiché si l'image ne charge pas, et lu par les lecteurs d'écran -->
+
+            <ul class="infos">
+                <li>Préparation : 20 min</li>
+                <li>Cuisson : 15 min</li>
+                <li>Pour 4 personnes</li>
+            </ul>
+        </section>
+
+        <!-- Section 2 : la recette (ingrédients + instructions côte à côte) -->
+        <section class="recette">
+
+            <article class="carte" id="ingredients">
+                <h2>Ingrédients</h2>
+                <ul>
+                    <li>400 g de tagliatelles</li>
+                    <li>1 homard cuit (environ 600 g)</li>
+                    <li>1 échalote</li>
+                    <li>2 gousses d'ail</li>
+                    <li>10 cl de vin blanc</li>
+                    <li>20 cl de crème liquide</li>
+                    <li>1 cuillère à soupe de concentré de tomate</li>
+                    <li>2 cuillères à soupe d'huile d'olive</li>
+                    <li>Persil, sel et poivre</li>
+                </ul>
+            </article>
+
+            <article class="carte" id="preparation">
+                <h2>Préparation</h2>
+                <ol>
+                    <li>Décortiquer le homard et couper la chair en morceaux.</li>
+                    <li>Faire revenir l'échalote et l'ail hachés dans l'huile d'olive.</li>
+                    <li>Ajouter le concentré de tomate, puis le vin blanc, et laisser réduire 5 minutes.</li>
+                    <li>Verser la crème, ajouter le homard, saler, poivrer et laisser mijoter 5 minutes.</li>
+                    <li>Cuire les pâtes dans l'eau bouillante salée, puis les égoutter.</li>
+                    <li>Mélanger les pâtes à la sauce, parsemer de persil et servir chaud.</li>
+                </ol>
+                <p class="bon-appetit">Bon appétit !</p>
+            </article>
+
+        </section>
+
+        <!-- Section 3 : formulaire d'avis -->
+        <section class="avis" id="avis">
+            <h2>Partagez votre avis</h2>
+            <p>Votre opinion est importante pour nous !</p>
+
+            <form action="#" method="post">
+                <!-- action="#" : pour l'instant le formulaire n'envoie rien (il faudrait un serveur pour traiter les données) -->
+
+                <div class="champ">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom complet">
+                </div>
+
+                <div class="champ">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required placeholder="Votre adresse mail">
+                </div>
+
+                <div class="champ">
+                    <label for="note">Note :</label>
+                    <select id="note" name="note">
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Très bien</option>
+                        <option value="3">3 - Moyen</option>
+                        <option value="2">2 - Décevant</option>
+                        <option value="1">1 - Mauvais</option>
+                    </select>
+                </div>
+
+                <div class="champ">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
+                </div>
+
+                <button type="submit" class="bouton">Envoyer</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ========== PIED DE PAGE ========== -->
+    <footer class="footer">
+        <p>&copy; 2026 Notre Site de Recettes. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
